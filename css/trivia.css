@@ -1,0 +1,176 @@
+/* general */
+          body {
+            font-family: Arial, Helvetica,
+            sans-serif;
+            color: #333333;
+          }
+          header div {
+            font-size: 1.25rem;
+          }
+          h1 {
+            color: #333333;
+            font-size: 3rem;
+            margin-bottom: .5rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border-bottom: 1px solid #333333;
+          }
+          h1 svg {
+              height: 4rem;
+              width: 4rem;
+              margin-right: .5rem;
+              margin-top: -21px;
+          }
+          h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #333333;
+          }
+          main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            text-align: center;
+          }
+          p {
+            text-align:center;
+            color: #333333;
+          }
+          /* Let's Begin Button */
+          .btn-big {
+            display: inline-block;
+            background-image: linear-gradient(to right, gray, white, gray);
+            text-align:center;
+            padding: 15px 15px;
+            width: 100px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #0a0a0a;
+            background-color: #fff;
+            font-weight: 600;
+            transition: all .2s;
+          }
+          .btn-big:hover {
+            background: #aaa;
+            color: #fafafa;
+          }
+          .btn-big.disabled {
+            pointer-events: none;
+            color: #aaa;
+          }
+
+          footer {
+            padding: 1rem 0;
+            text-align: center;
+            font-size: .75rem;
+          }
+
+          /* utilities */
+          .container {
+            max-width: 800px;
+            margin: 0 auto;
+          }
+          .disabled {
+            pointer-events: none;
+            color: #aaa;
+          }
+          /* question pages */
+          main > div:not(.results) {
+            max-width: 575px;
+            width: 100%;
+          }
+          .answer-container {
+            margin-bottom: 1.5rem
+          }
+          .answer-item {
+            padding: .5rem;
+            border: 1px solid #dcdcdc;
+            border-radius: 3px;
+            background-color: #eee;
+            margin-bottom: .25rem;
+            transition: background-color 300ms, box-shadow 300ms;
+            text-align: left;
+          }
+          .answer-item:hover {
+            background-color: #fafafa;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+          }
+          .answer-item.selected {
+            background-color: #fafafa;
+            border: 2px solid #63b3ed;
+          }
+          .answer-item span:first-child {
+            padding-right: .5rem;
+            margin-right: .25rem;
+            color: gray;
+            border-right: 1px solid #dcdcdc;
+            font-size: .875rem;
+          }
+
+          /* navigation */
+          .nav-container {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+          }
+
+          /* results page */
+          .result-container {
+            display: flex;
+            flex-direction: row;
+          }
+          .result-card {
+            background: #ddd;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            margin-right: 15px;
+            width: 33%;
+          }
+          .result-card:last-child{
+            margin-right: 0;
+          }
+          .result-card-headline {
+            font-weight: 600;
+            padding-bottom: .5rem;
+            margin-bottom: .5rem;
+            border-bottom: 1px solid #aaa;
+          }
+          .result-key ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          .result-key ul li{
+            text-align: left;
+            font-size: .75rem;
+            padding-top: .5rem;
+            padding-bottom: .5rem;
+          }
+          .result-card-overview {
+            line-height: 1.5;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+
+          }
+          .rank,
+          .percentage {
+            font-size: 1.85rem;
+            font-weight: 600;
+          }
+          @media screen and (max-width: 639px) {
+            .result-container {
+              display: flex;
+              flex-direction: column;
+            }
+            .result-card {
+              margin-right: 0;
+              margin-bottom: 1rem;
+            }
+          }
